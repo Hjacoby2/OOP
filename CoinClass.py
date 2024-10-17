@@ -8,7 +8,7 @@ class Coin:
     # sideup data attribute with 'Heads'.
 
     def __init__(self):
-        self.sideup = 'Heads'
+        self.__sideup = 'Heads' #hiding
 
     # The toss method generates a random number
     # in the range of 0 through 1. If the number
@@ -21,8 +21,10 @@ class Coin:
         else:
             self.sideup = 'Tails'
 
+            # it is best practice to have get and set methods for each attribute
+
     # The get_sideup method returns the value
     # referenced by sideup.
 
     def get_sideup(self):
-            return self.sideup
+            return self.__sideup
